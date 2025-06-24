@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Share 3</title>
+    <title>Calculadora de Share 3 +</title>
     <style>
         * {
             margin: 0;
@@ -17,7 +17,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #220421 0%, #764ba289 100%);
             padding: 20px;
         }
 
@@ -159,12 +159,13 @@
         .motorola { background-color: #5fbb46; }
         .samsung { background-color: #1428a0; }
         .apple { background-color: #a2aaad; }
-        .others { background-color: #ff6b35; }
+        .OPPO { background-color: #ff6b35; }
+        .JOVI { background-color: #e410e4; }
     </style>
 </head>
 <body>
     <div class="calculator">
-        <h1>Calculadora de Share 3</h1>
+        <h1>Calculadora de Share 3 +</h1>
         
         <div class="input-group">
             <label for="motorola"><span class="brand-color motorola"></span>Motorola:</label>
@@ -180,12 +181,17 @@
             <label for="apple"><span class="brand-color apple"></span>Apple:</label>
             <input type="number" id="apple" placeholder="Digite a quantidade">
         </div>
-        
-        <div class="input-group">
-            <label for="others"><span class="brand-color others"></span>Outros:</label>
-            <input type="number" id="others" placeholder="Digite a quantidade">
-        </div>
-        
+
+         <div class="input-group">
+            <label for="OPPO"><span class="brand-color OPPO"></span>OPPO:</label>
+            <input type="number" id="OPPO" placeholder="Digite a quantidade">
+         </div>
+
+          <div class="input-group">
+            <label for="JOVI"><span class="brand-color JOVI"></span>JOVI:</label>
+            <input type="number" id="JOVI" placeholder="Digite a quantidade">
+          </div>
+
         <div class="buttons">
             <button class="reset-btn" onclick="resetFields()">Limpar</button>
             <button class="calculate-btn" onclick="calculatePercentages()">Calcular</button>
@@ -205,9 +211,15 @@
                 <span id="apple-result">0% (0)</span>
             </div>
             <div class="result-item">
-                <span><span class="brand-color others"></span>Outros:</span>
+                <span><span class="brand-color OPPO"></span>OPPO:</span>
                 <span id="others-result">0% (0)</span>
             </div>
+
+              <div class="result-item">
+                <span><span class="brand-color JOVI"></span>JOVI:</span>
+                <span id="others-result">0% (0)</span>
+              </div>
+
             <div class="result-item">
                 <span>Total:</span>
                 <span id="total-result">0</span>
@@ -259,7 +271,7 @@
             document.getElementById('results').style.display = 'none';
         }
     </script>
-    <style>
+<style>
     footer {
       position: fixed;
       bottom: 0;
