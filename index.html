@@ -212,12 +212,12 @@
             </div>
             <div class="result-item">
                 <span><span class="brand-color OPPO"></span>OPPO:</span>
-                <span id="others-result">0% (0)</span>
+                <span id="OPPO-result">0% (0)</span>
             </div>
 
               <div class="result-item">
                 <span><span class="brand-color JOVI"></span>JOVI:</span>
-                <span id="others-result">0% (0)</span>
+                <span id="JOVI-result">0% (0)</span>
               </div>
 
             <div class="result-item">
@@ -233,10 +233,11 @@
             const motorola = parseFloat(document.getElementById('motorola').value) || 0;
             const samsung = parseFloat(document.getElementById('samsung').value) || 0;
             const apple = parseFloat(document.getElementById('apple').value) || 0;
-            const others = parseFloat(document.getElementById('others').value) || 0;
+            const OPPO = parseFloat(document.getElementById('OPPO').value) || 0;
+             const JOVI = parseFloat(document.getElementById('JOVI').value) || 0;
             
             // Calcular total
-            const total = motorola + samsung + apple + others;
+            const total = motorola + samsung + apple + OPPO + JOVI;
             
             if (total === 0) {
                 alert("Por favor, insira valores maiores que zero para pelo menos uma marca.");
@@ -247,13 +248,15 @@
             const motorolaPercent = ((motorola / total) * 100).toFixed(2);
             const samsungPercent = ((samsung / total) * 100).toFixed(2);
             const applePercent = ((apple / total) * 100).toFixed(2);
-            const othersPercent = ((others / total) * 100).toFixed(2);
+            const OPPOPercent = ((OPPO / total) * 100).toFixed(2);
+            const JOVIPercent = ((JOVI / total) * 100).toFixed(2);
             
             // Atualizar resultados
             document.getElementById('motorola-result').textContent = `${motorolaPercent}% (${motorola})`;
             document.getElementById('samsung-result').textContent = `${samsungPercent}% (${samsung})`;
             document.getElementById('apple-result').textContent = `${applePercent}% (${apple})`;
-            document.getElementById('others-result').textContent = `${othersPercent}% (${others})`;
+            document.getElementById('OPPO-result').textContent = `${OPPOPercent}% (${OPPO})`;
+             document.getElementById('JOVI-result').textContent = `${JOVIPercent}% (${JOVI})`;
             document.getElementById('total-result').textContent = total;
             
             // Mostrar resultados
@@ -265,7 +268,8 @@
             document.getElementById('motorola').value = '';
             document.getElementById('samsung').value = '';
             document.getElementById('apple').value = '';
-            document.getElementById('others').value = '';
+            document.getElementById('OPPO').value = '';
+            document.getElementById('JOVI').value = '';
             
             // Esconder resultados
             document.getElementById('results').style.display = 'none';
